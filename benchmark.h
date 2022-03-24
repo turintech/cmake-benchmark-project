@@ -13,7 +13,7 @@
 class BenchmarkRunner
 {
 public:
-    void benchmark();
+    bool benchmark();
 };
 
 #endif

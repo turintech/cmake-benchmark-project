@@ -3,7 +3,7 @@
 #include "Palindrome.h"
 #include "benchmark.h"
 
-#define BOOST_TEST_MODULE VsidCommonTest
+#define BOOST_TEST_MODULE SampleTestModule
 #include <boost/test/unit_test.hpp>
 
 BOOST_AUTO_TEST_SUITE( reverse_tests )
@@ -45,11 +45,12 @@ BOOST_AUTO_TEST_CASE( is_palindrome )
 BOOST_AUTO_TEST_SUITE_END()
 
 BOOST_AUTO_TEST_SUITE( benchmark_tests )
+    BOOST_AUTO_TEST_CASE( benchmark )
+    {
+        std::cout<<"Running benchmark."<<std::endl;
+        BenchmarkRunner runner;
 
-BOOST_AUTO_TEST_CASE( benchmark )
-{
-    BenchmarkRunner runner;
-    runner.benchmark();
-}
+        BOOST_CHECK_EQUAL( runner.benchmark(), true );
 
+    }
 BOOST_AUTO_TEST_SUITE_END()
