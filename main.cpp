@@ -1,3 +1,4 @@
+#include <boost/container/stable_vector.hpp>
 #include <iostream>
 #include <boost/shared_ptr.hpp>
 #include <boost/filesystem.hpp>
@@ -6,7 +7,7 @@
 int main(int argc, char *argv[])
 {
     std::cout << "Hello Third Party Include!" << std::endl;
-    std::vector<int> v;
+    boost::container::stable_vector<int> v;
 
     // use a shared ptr
     boost::shared_ptr<int> isp(new int(4));
