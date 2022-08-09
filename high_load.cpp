@@ -1,4 +1,4 @@
-#include "benchmark.h"
+#include "high_load.h"
 
 using namespace std;
 
@@ -8,7 +8,7 @@ bool BenchmarkRunner::benchmark(){
             boost::container::flat_map<int, int> test_map;
             boost::container::stable_vector<int> test_keys;
             // Insert random keys
-            for (int i = 0; i < 5000; i++) {
+            for (int i = 0; i < 500; i++) {
                 int random_key = rand() % 100000;
                 test_map[random_key] = 0;
                 test_keys.push_back(random_key);

@@ -1,5 +1,5 @@
-#ifndef __BENCHMARK_H__
-#define __BENCHMARK_H__
+#ifndef __HIGH_LOAD_H__
+#define __HIGH_LOAD_H__
 
 #include <cstdio>
 #include <ctime>

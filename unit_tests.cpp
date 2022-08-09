@@ -1,7 +1,7 @@
 #include <string>
 #include "Reverse.h"
 #include "Palindrome.h"
-#include "benchmark.h"
+#include "high_load.h"
 
 #define BOOST_TEST_MODULE SampleTestModule
 #include <boost/test/unit_test.hpp>

@@ -12,7 +12,7 @@ add_library(example_boost_unit_test
     Reverse.cpp
     Palindrome.cpp
     main.cpp
-    benchmark.cpp
+    high_load.cpp
 )
 
 target_include_directories(example_boost_unit_test
