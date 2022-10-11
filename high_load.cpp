@@ -4,7 +4,7 @@ using namespace std;
 
 bool BenchmarkRunner::benchmark(){
         srand( (unsigned)time(NULL) );
-        for(int i=0;i<1000;i++) {
+        for(int i=0;i<5000;i++) {
             boost::container::flat_map<int, int> test_map;
             boost::container::stable_vector<int> test_keys;
             // Insert random keys
