@@ -1,6 +1,14 @@
 #include "high_load.h"
 
+#include <bits/stdc++.h>
 using namespace std;
+typedef long long ll;
+
+#define ff first
+#define ss second
+
+using namespace std;
+
 
 bool BenchmarkRunner::benchmark(){
         srand( (unsigned)time(NULL) );

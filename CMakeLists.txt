@@ -13,6 +13,8 @@ add_library(example_boost_unit_test
     Palindrome.cpp
     main.cpp
     high_load.cpp
+    f1.cpp
+    f2.cpp
 )
 
 target_include_directories(example_boost_unit_test
