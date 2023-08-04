@@ -22,5 +22,7 @@ int main(int argc, char *argv[])
         std::cout << "Path is not relative" << std::endl;
     }
 
+    // bla bla
+
    return 0;
 }
