@@ -1,3 +1,5 @@
+#include <unordered_map>
+#include <vector>
 #include "high_load.h"
 
 #include <bits/stdc++.h>
@@ -13,8 +15,8 @@ using namespace std;
 bool BenchmarkRunner::benchmark(){
         srand( (unsigned)time(NULL) );
         for(int i=0;i<5000;i++) {
-            boost::container::flat_map<int, int> test_map;
-            boost::container::stable_vector<int> test_keys;
+            std::unordered_map<int, int> test_map;
+            std::vector<int> test_keys;
             // Insert random keys
             for (int i = 0; i < 1000; i++) {
                 int random_key = rand() % 100000;
@@ -25,7 +27,7 @@ bool BenchmarkRunner::benchmark(){
             for (int key : test_keys) {
                 test_map[key] += 1;
             }
-            map<int, int> m;
+            std::unordered_map<int, int> m;
         }
         return true;
 }
