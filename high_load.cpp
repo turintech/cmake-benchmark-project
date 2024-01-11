@@ -9,7 +9,6 @@ typedef long long ll;
 
 using namespace std;
 
-
 bool BenchmarkRunner::benchmark(){
         srand( (unsigned)time(NULL) );
         for(int i=0;i<5000;i++) {
