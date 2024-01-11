@@ -7,5 +7,7 @@ bool Palindrome::isPalindrome(const std::string& toCheck)
         return true;
     }
 
+    
+
     return false;
 }
