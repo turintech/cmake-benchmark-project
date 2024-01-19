@@ -10,22 +10,32 @@ typedef long long ll;
 using namespace std;
 
 
-bool BenchmarkRunner::benchmark(){
-        srand( (unsigned)time(NULL) );
-        for(int i=0;i<5000;i++) {
-            boost::container::flat_map<int, int> test_map;
-            boost::container::stable_vector<int> test_keys;
-            // Insert random keys
-            for (int i = 0; i < 1000; i++) {
-                int random_key = rand() % 100000;
-                test_map[random_key] = 0;
-                test_keys.push_back(random_key);
-            }
+bool BenchmarkRunner::runBenchmark() {
+    // Initialize random number generator with current time as seed
+    srand(static_cast<unsigned>(time(nullptr)));
 
-            for (int key : test_keys) {
-                test_map[key] += 1;
-            }
-            map<int, int> m;
+    // Perform 5000 iterations of the benchmark
+    for(int i = 0; i < 5000; i++) {
+        // Initialize a flat_map and a stable_vector from the Boost library
+        boost::container::flat_map<int, int> testMap;
+        boost::container::stable_vector<int> testKeys;
+
+        // Insert 1000 random keys into the map and vector
+        for (int i = 0; i < 1000; i++) {
+            int randomKey = rand() % 100000;
+            testMap[randomKey] = 0;
+            testKeys.push_back(randomKey);
         }
-        return true;
+
+        // Increment the value of each key in the map
+        for (int key : testKeys) {
+            testMap[key] += 1;
+        }
+
+        // Unused map, consider removing if not needed
+        map<int, int> m;
+    }
+
+    // Return true to indicate successful completion of the benchmark
+    return true;
 }
