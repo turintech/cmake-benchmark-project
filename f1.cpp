@@ -29,16 +29,17 @@ bool F1::run()
     }
 
     vector<pair<int, int>> edges;
+    edges.reserve(N - 1 + (total - K)); // Reserve space to avoid reallocations
     for (int i = 2; i <= N; ++i)
     {
-        edges.push_back({1, i});
+        edges.emplace_back(1, i);
     }
 
     for (int i = 2; i < N && total > K; ++i)
     {
         for (int j = i + 1; j <= N && total > K; ++j, --total)
         {
-            edges.push_back({i, j});
+            edges.emplace_back(i, j);
         }
     }
 

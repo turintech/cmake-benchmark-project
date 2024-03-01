@@ -1,3 +1,8 @@
+#include <boost/container/stable_vector.hpp>
+#include <map>
+#include <boost/container/flat_map.hpp>
+#include <cstdlib>
+#include <ctime>
 #include "high_load.h"
 
 #include <bits/stdc++.h>
@@ -18,8 +23,10 @@ bool BenchmarkRunner::benchmark(){
             // Insert random keys
             for (int i = 0; i < 1000; i++) {
                 int random_key = rand() % 100000;
-                test_map[random_key] = 0;
-                test_keys.push_back(random_key);
+                auto result = test_map.insert(std::make_pair(random_key, 0));
+                if (result.second) {
+                    test_keys.push_back(random_key);
+                }
             }
 
             for (int key : test_keys) {
