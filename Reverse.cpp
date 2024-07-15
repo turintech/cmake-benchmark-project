@@ -3,10 +3,10 @@
 std::string Reverse::reverse(std::string& toReverse)
 {
     std::string ret;
-
-    for(std::string::reverse_iterator rit=toReverse.rbegin(); rit!=toReverse.rend(); ++rit)
+    ret.reserve(toReverse.size()); // Reserve memory to avoid multiple allocations
+    for(auto rit = toReverse.rbegin(); rit != toReverse.rend(); ++rit)
     {
-        ret.insert(ret.end(), *rit);
+        ret.push_back(*rit); // Use push_back instead of insert for better performance
     }
     return ret;
 }
