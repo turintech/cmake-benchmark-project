@@ -1,3 +1,6 @@
+#include <boost/filesystem.hpp>
+#include <boost/shared_ptr.hpp>
+#include <iostream>
 #include <iostream>
 #include <boost/shared_ptr.hpp>
 #include <boost/filesystem.hpp>
@@ -9,7 +12,7 @@ int main(int argc, char *argv[])
     std::vector<int> v;
 
     // use a shared ptr
-    boost::shared_ptr<int> isp(new int(4));
+    std::shared_ptr<int> isp(new int(4));
 
     // trivial use of boost filesystem
     boost::filesystem::path path = "/usr/share/cmake/modules";
