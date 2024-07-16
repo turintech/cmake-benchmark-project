@@ -9,7 +9,7 @@ int main(int argc, char *argv[])
     std::vector<int> v;
 
     // use a shared ptr
-    boost::shared_ptr<int> isp(new int(4));
+    auto isp = std::make_shared<int>(4);
 
     // trivial use of boost filesystem
     boost::filesystem::path path = "/usr/share/cmake/modules";
