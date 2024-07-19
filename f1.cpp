@@ -29,6 +29,7 @@ bool F1::run()
     }
 
     vector<pair<int, int>> edges;
+    edges.reserve(total);
     for (int i = 2; i <= N; ++i)
     {
         edges.push_back({1, i});
